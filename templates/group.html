@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Heart Disease Prediction - About</title>
+        <style>
+
+            body{
+                background-color:#f9f4bf ;
+                color: #03256c;
+                margin: 10px auto;
+                width: 90%;
+            }
+
+            h1
+            {
+                text-align: center;
+                margin-bottom: 75px;
+            }
+
+            .group
+            {
+                width: 60%;
+                margin: 0 auto;
+                text-align: center;
+                padding: 20px 0;
+            }
+          
+            li{
+                font-size: large;
+                list-style: none;
+                padding-bottom: 10px;
+            }
+
+            img{
+                width: auto;
+                height: 100%;
+            }
+
+            .btn {
+                text-decoration: none;
+                background-color: #bfc1c1;
+                color: #03256c;
+                border: 1px solid #03256c;
+                padding: 5px 10px;
+                position: fixed;
+                margin-bottom: 40px;
+                margin-left: 40px;
+            }
+
+            .btn:hover{
+                color: #bfc1c1;
+                background-color: #03256c;
+            }
+            
+         </style>
+    </head>
+    <body>
+        <h1>WE ARE GROUP NO 06</h1>
+        <div class="group">
+            <ul>
+                <li>Ebenezer Ireoluwa Adewola - 0848230</li>
+                <li>Habeeb Ayanyemi - 0869126</li>    
+                <li>Subasinghe Kankanamalage Udanie Subasinghe - 0860626</li>
+            </ul>
+            <img src="{{ url_for('static', filename='images/group.JPG') }}" alt="Group Image">
+            
+        </div>
+        <a class="btn" href="{{ url_for('index') }}">
+            Back
+        </a>
+    </body>
+</html>

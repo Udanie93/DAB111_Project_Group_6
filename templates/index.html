@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Heart Disease Prediction - Home</title>
+        <style>
+            body
+            {
+            background-color:#f9f4bf ;
+            color: #03256c;
+            margin: 0 auto;
+            width: 90%;
+            }
+
+            h1
+            {
+                text-align: center;
+                margin-bottom: 75px;
+            }
+
+            .content
+            {
+                width: 100%;
+            }
+
+            div
+            {
+                float:left;
+            }
+
+            .left,.right{
+                width: 50%;
+            }
+
+            table {
+              border-collapse: collapse;
+              width: 75%;
+              margin-bottom: 30px;
+            }
+
+            .center
+            {
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 20%;
+            }
+
+            th, td {
+              text-align: center;
+              padding: 8px;
+              border: 2px solid #184e77;
+            }
+
+            th{
+                background-color: #bfc1c1;
+                color: #03256c;
+            }
+
+            tr:hover {
+                background-color: #bfc1c1;
+                color: #7d4600;
+            }
+
+            a{
+                color: #03256c;
+                text-decoration: none;
+            }
+
+            a:hover{
+                color: #7d4600;
+            }
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+            
+            .group{
+                width: 75%;
+                margin-left: 25%;
+            }
+
+            .btn {
+                text-decoration: none;
+                padding: 0.5rem;
+                background-color: #bfc1c1;
+                color: #03256c;
+                border: 1px solid #03256c;
+                padding: 5px 10px;
+               position: fixed;
+               bottom: 40px;
+               left: 40px;
+            }
+
+            .btn:hover{
+                color: #bfc1c1;
+                background-color: #03256c;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Heart Disease Prediction</h1>
+        <p>Welcome to our Heart Disease Prediction tool, where cutting-edge data analysis meets personalized health insights. Leveraging a comprehensive dataset encompassing vital factors such as age, gender, cholesterol levels, blood pressure, and lifestyle habits, our system delivers accurate predictions regarding your risk of cardiovascular issues. By presenting the output of this rigorous analysis, we empower you with actionable information to proactively manage your heart health. Take charge of your well-being today by exploring the results of our predictive model and making informed decisions to safeguard your cardiovascular health.<br></p>
+        <div class="content">
+            <div class="left">
+                <table class="center">
+                    <tr>
+                      <th>Menu</th>
+                    </tr>
+                    <tr>
+                      <td><a href="{{ url_for('data') }}">Heart Disease Prediction Data</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="{{ url_for('about') }}">Exploring The Narrative of Our Dataset</a></td>
+                    </tr>
+                  </table>
+                  <div class="group">
+                    <a class="btn" href="{{ url_for('group') }}">
+                        Group Members
+                    </a>
+                  </div>
+            </div>
+            <div class="right">
+                <img src="{{ url_for('static', filename='images/cover.png') }}" alt="Cover Image">
+            </div>
+        </div>
+    </body>
+</html>

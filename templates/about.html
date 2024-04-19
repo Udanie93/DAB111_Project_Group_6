@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Heart Disease Prediction - About</title>
+        <style>
+
+            body{
+                background-color:#f9f4bf ;
+                color: #03256c;
+                margin: 10px auto;
+                width: 90%;
+            }
+
+            h1
+            {
+                text-align: center;
+                margin-bottom: 75px;
+            }
+
+            #web{
+                color: #03256c;
+                text-decoration: none;
+            }
+
+            #web:hover{
+                color: #7d4600;
+            }
+
+            table {
+              border-collapse: collapse;
+              width: 75%;
+              margin-top: 30px;
+            }
+
+            .center{
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            thead
+            {
+                text-align: center;
+            }
+
+            th, td {
+              text-align: center;
+              padding: 8px;
+              border: 2px solid #184e77;
+            }
+
+            th{
+                background-color: #bfc1c1;
+                color: #03256c;
+            }
+
+            tr:hover {
+                background-color: #bfc1c1;
+                color: #7d4600;
+            }
+
+            .btn {
+                text-decoration: none;
+                background-color: #bfc1c1;
+                color: #03256c;
+                border: 1px solid #03256c;
+                padding: 5px 10px;
+            }
+
+            .btn:hover{
+                color: #bfc1c1;
+                background-color: #03256c;
+            }
+            
+         </style>
+    </head>
+    <body>
+        <a class="btn" href="{{ url_for('index') }}">
+            Back
+        </a>
+        <h1>Exploring The Narrative of Our Dataset</h1>
+        <p>Here, we delve into the stories behind the numbers, uncovering the rich tapestry of information within our dataset. Every variable holds a tale, every entry a chapter waiting to be explored. From the source of the data to the definition of each variable, join us on a journey of discovery as we unravel the narrative woven within our dataset.</p>
+        <br><h2><u>Dataset Summary</u></h2>
+        <p>This is a data set used to predict heart disease. Patients were classified as having or not having heart disease based on cardiac catheterization, the gold standard. If they had more than 50% narrowing of a coronary artery they were labeled as having heart disease.</p>
+        <p>In this cohort, there are 270 patients and there are 13 independent predictive variables or column attributes. The attributes are explained on the <br><b>website : <a id="web" href="https://archive.ics.uci.edu/ml/datasets/Heart+Disease"><i>https://archive.ics.uci.edu/ml/datasets/Heart+Disease</i></a></b></p>
+        <p>After this dataset became available, the UCI data repository made another cohort available with 303 patients. They shared this with Kaggle which is a data competition initiative. First, the file format is .data which is uncommonly used. Secondly, the outcome was reversed by accident. This is why we are still using the older cohort of patients</p>
+        <table class="center">
+            <thead>
+                <tr>
+                    <th>COLUMN NAME</th>
+                    <th>TYPE</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>age</td>
+                    <td>integer</td>
+                    <td>In years</td>
+                </tr>
+                <tr>
+                    <td>sex</td>
+                    <td>integer</td>
+                    <td>1 = male; 0 = female</td>
+                </tr>
+                <tr>
+                    <td>chest_pain_type</td>
+                    <td>integer</td>
+                    <td>Value 1: typical angina <br> Value 2: atypical angina <br> Value 3: non-anginal pain <br> Value 4: asymptomatic</td>
+                </tr>
+                <tr>
+                    <td>bp</td>
+                    <td>integer</td>
+                    <td>resting blood pressure (in mm Hg on admission to the hospital)</td>
+                </tr>
+                <tr>
+                    <td>cholesterol</td>
+                    <td>integer</td>
+                    <td>serum cholestoral in mg/dl</td>
+                </tr>
+                <tr>
+                    <td>fbs_over_120</td>
+                    <td>integer</td>
+                    <td>fasting blood sugar > 120 mg/dl<br>1 = true; 0 = false</td>
+                </tr>
+                <tr>
+                    <td>ekg_results</td>
+                    <td>integer</td>
+                    <td>resting electrocardiographic results <br> Value 0: normal <br> Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV) <br> Value 2: showing probable or definite left ventricular hypertrophy</td>
+                </tr>
+                <tr>
+                    <td>max_hr</td>
+                    <td>integer</td>
+                    <td>maximum heart rate achieved</td>
+                </tr>
+                <tr>
+                    <td>exercise_angina</td>
+                    <td>integer</td>
+                    <td>exercise induced angina <br>1 = yes; 0 = no</td>
+                </tr>
+                <tr>
+                    <td>st_depression</td>
+                    <td>decimal</td>
+                    <td>ST depression induced by exercise relative to rest</td>
+                </tr>
+                <tr>
+                    <td>slope_of_st</td>
+                    <td>integer</td>
+                    <td>the slope of the peak exercise ST segment <br> Value 1: upsloping <br> Value 2: flat <br> Value 3: downsloping</td>
+                </tr>
+                <tr>
+                    <td>number_of_vessels_fluro</td>
+                    <td>integer</td>
+                    <td>number of major vessels (0-3) colored by flourosopy</td>
+                </tr>
+                <tr>
+                    <td>thallium</td>
+                    <td>integer</td>
+                    <td>3 = normal<br> 6 = fixed defect<br> 7 = reversable defect</td>
+                </tr>
+                <tr>
+                    <td>heart_disease</td>
+                    <td>string</td>
+                    <td>Value 0: < 50% diameter narrowing <br> Value 1: > 50% diameter narrowing</td>
+                </tr>
+            </tbody>
+        </table>
+        <a class="btn" href="{{ url_for('index') }}">
+            Back
+          </a>
+    </body>
+</html>

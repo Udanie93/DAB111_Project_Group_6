@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Heart Disease Prediction - Data </title>
+        <style>
+
+            body{
+                background-color:#f9f4bf ;
+                color: #03256c;
+                margin: 0 auto;
+                width: 90%;
+            }
+
+            h1
+            {
+                text-align: center;
+                margin-bottom: 75px;
+            }
+
+            table {
+              border-collapse: collapse;
+              width: 100%;
+              margin-bottom: 30px;
+            }
+
+            th, td {
+              text-align: center;
+              padding: 8px;
+              border: 2px solid #184e77;
+            }
+            
+            th{
+                background-color: #bfc1c1;
+                color: #03256c;
+            }
+
+            tr:hover {
+                background-color: #bfc1c1;
+                color: #7d4600;
+            }
+
+            .btn {
+                text-decoration: none;
+                padding: 0.5rem;
+                background-color: #bfc1c1;
+                color: #03256c;
+                border: 1px solid #03256c;
+                padding: 5px 10px;
+            }
+
+            .btn:hover{
+                color: #bfc1c1;
+                background-color: #03256c;
+            }
+            
+
+         </style>
+    </head>
+    <body>
+        <h1>Heart Disease Prediction Data</h1>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th><B>Age</B></th>
+                    <th><B>Sex</B></th>
+                    <th><B>Chest Pain Type</B></th>
+                    <th><B>BP</B></th>
+                    <th><B>Cholesterol</B></th>
+                    <th><B>FBS over 120</B></th>
+                    <th><B>EKG Results</B></th>
+                    <th><B>Max HR</B></th>
+                    <th><B>Exercise Angina</B></th>
+                    <th><B>ST Depression</B></th>
+                    <th><B>Slope of ST</B></th>
+                    <th><B>Number of Vessels Fluro</B></th>
+                    <th><B>Thallium</B></th>
+                    <th><B>Heart Disease</B></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in heart_dis%}
+            <tr>
+                <td>{{ s[0] }}</td>
+                <td>{{ s[1] }}</td>
+                <td>{{ s[2] }}</td>
+                <td>{{ s[3] }}</td>
+                <td>{{ s[4] }}</td>
+                <td>{{ s[5] }}</td>
+                <td>{{ s[6] }}</td>
+                <td>{{ s[7] }}</td>
+                <td>{{ s[8] }}</td>
+                <td>{{ s[9] }}</td>
+                <td>{{ s[10] }}</td>
+                <td>{{ s[11] }}</td>
+                <td>{{ s[12] }}</td>
+                <td>{{ s[13] }}</td>
+            </tr>
+                {% endfor %}    
+            </tbody>
+        </table>
+        <a class="btn" href="{{ url_for('index') }}">
+            Back
+          </a>
+    </body>
+</html>
+
